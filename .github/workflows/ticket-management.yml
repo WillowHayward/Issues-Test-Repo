@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Echo event payload
         run: |
-          echo "HELLO WORLD"
-          printf '%s' "${{ toJson(github.event) }}" 
+          echo "${{ toJson(github.event) }}" >> payload.json
+          cat payload.json | jq .
