@@ -1,7 +1,7 @@
 on:
   issues:
     types: 
-      - labelled
+      - labeled
       - assigned
 
 jobs:
