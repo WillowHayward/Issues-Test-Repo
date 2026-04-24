@@ -1,0 +1,12 @@
+on:
+  issues:
+    types: 
+      - edited
+
+jobs:
+  echo-payload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo event payload
+        run: |
+          echo "${{ toJson(github.event) }}" | jq .
