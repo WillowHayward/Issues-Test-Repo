@@ -1,7 +1,8 @@
 on:
   issues:
     types: 
-      - edited
+      - labelled
+      - assigned
 
 jobs:
   echo-payload:
