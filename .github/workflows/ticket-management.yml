@@ -9,6 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo event payload
-        run: |
-          echo "${{ toJson(github.event) }}" >> payload.json
-          cat payload.json | jq .
+        run: jq . "$GITHUB_EVENT_PATH"
